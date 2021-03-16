@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Bubblegum+Sans|Caveat+Brush|Chewy|Lobster+Two");
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  color: #707070;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+input#eye {
+  position: absolute;
+  right: 23px;
+  top: 8px;
+}
+.no-outline:focus {
+  outline: none;
+}
+#reg_password {
+  position: relative;
+}
+.parent {
+  position: absolute;
+}
+.container
+/* .no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too 
+} */
+
+
+.container
+.form-control {
+  border: 0;
+  border-radius: 0px;
+  border-bottom: 1px solid #707070;
+}
+
+
+.form-section{
+    padding: 20px 150px;
+}
+.btn-outline-dark{
+    width: 210px;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-section{
+        padding: 0px 10px;
+    }
+    .login-extra{
+        margin-top: 5% !important;
+    }
+    .btn-outline-dark{
+        width: 100%;
+    }
+  }
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 4px double #ff00ff;
+  }
+.navbar {
+  border: 0;
+  z-index: 9999;
+  letter-spacing: 4px;
+}
+.logo {
+  display: block;
+  height: auto;
+  width: 52px;
+  padding-top: 5px;
+  margin-right: 15px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  padding: 15px; /* firefox bug fix */
+  width: auto;
+}
+.navbar .nav > li > a {
+  line-height: 50px;
+}
+
+.navbar-header h1 {
+  letter-spacing: 1px;
+  color: black !important;
+  font-family: "Lobster Two", cursive;
+}
+
+.navbar li a,
+.navbar {
+  color: black !important;
+  font-size: 12px;
+  transition: all 0.6s 0s;
+}
+
+.navbar-toggle {
+  background-color: transparent !important;
+  border: 0;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: red !important;
+}
+
+@media (max-width: 575px)
+{
+    .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, 
+    .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    }
+
+}
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px)
+{
+    .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, 
+    .hidden-unless-xs, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
+}
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
+}
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px)
+{
+    .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, .hidden-xl-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg
+    {
+        display: none !important;
+    } 
+}
+
+.login-extra{
+    margin-top: 27%;
+}
