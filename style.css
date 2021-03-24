@@ -80,8 +80,8 @@ input#eye {
     will-change: transform !important;
     top: 0px !important;
     left: 0px !important;
-    transform: translate3d(222px, 80px, 0px) !important;
-    width: 300px !important;
+    transform: translate3d(95px, 80px, 0px) !important;
+    width: 400px !important;
 }
   }
 .newspaper {
