@@ -75,6 +75,14 @@ input#eye {
     .btn-outline-dark{
         width: 100%;
     }
+    .popover {
+    position: absolute !important;
+    will-change: transform !important;
+    top: 0px !important;
+    left: 0px !important;
+    transform: translate3d(222px, 80px, 0px) !important;
+    width: 300px !important;
+}
   }
 .newspaper {
     column-count: 3;
