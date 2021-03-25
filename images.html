@@ -66,32 +66,36 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-12 text-justify">
+				<div class="col-md text-center">
 					<br />
 					<br />
-					<h3> Before you start selling, Let's verifiy your ID</h2>
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-					<p>eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-						nisi ut aliquip ex ea commodo consequat.</p>
-
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-						dolore eu fugiat nulla pariatur.</p>
+					<h2>Seller ID Verification</h2>
+					<p href="#">Please attach front and back of the ID Card</p>
 					<br />
-
-					<p href="#"><img width="20px" style="margin-bottom:2px; margin-right:5px" alt="Google sign-in" src="lock@2x.png" /><span class="text-dark">&nbsp; Your ID is secure with us.</span></p>
-					<a href="images.html"><button  type="button" class="btn mt-4 w-full" style="width: 32%; background-color: black;color: white;">Next</button></a>
+					<br>
+					<div class="container">
+						  	<div class="row justify-content-center">
+							  	<div class="col-sm-2 imgUp">
+								    <div class="imagePreview">
+								    </div>
+										<label class="btn btn-dark">
+											Front<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+										</label>
+								 	</div><!-- col-2 -->
+							  	<div class="col-sm-2 imgUp">
+								    <div class="imagePreview">
+								    </div>
+										<label class="btn btn-dark">
+											Back<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+										</label>
+								 	</div><!-- col-2 -->
+								</div><!-- row -->
+							</div>
+					<a href="verify.html"><button  type="button" class="btn mt-4 w-full" style="width: 32%; background-color: black;color: white;">Submit</button></a>
 				</div>
-				<div class="col-md-6 col-sm-12 text-center">
-					<br/>
-					<br/>
-					<br/>
-					<p><img width="400px" style="margin-bottom:2px; margin-right:5px" alt="Google sign-in" src="id_verificaiton@2x.png" /></p>
-				</div>	
 			</div>
 	</section>
-	<footer class="footer py-3  mt-4" style="border-top: 1px solid #707070; bottom: 0px; width: 100%; position: absolute;">
+	<footer class="footer py-3  mt-4" style="border-top: 1px solid #707070; width: 100%;">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-4">
@@ -122,5 +126,33 @@
 				html: true,
 				sanitize: false
 		});
+		$(".imgAdd").click(function(){
+  $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
+});
+$(document).on("click", "i.del" , function() {
+// 	to remove card
+  $(this).parent().remove();
+// to clear image
+  // $(this).parent().find('.imagePreview').css("background-image","url('')");
+});
+$(function() {
+    $(document).on("change",".uploadFile", function()
+    {
+    		var uploadFile = $(this);
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+ 
+        if (/^image/.test( files[0].type)){ // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+ 
+            reader.onloadend = function(){ // set image data as background of div
+                //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
+uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
+            }
+        }
+      
+    });
+});
 	</script>	
 </body>
