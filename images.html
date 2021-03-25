@@ -75,18 +75,28 @@
 					<br>
 					<div class="container">
 						  	<div class="row justify-content-center">
-							  	<div class="col-sm-2 imgUp">
-								    <div class="imagePreview">
-								    </div>
-										<label class="btn btn-dark">
-											Front<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+							  	<div class="col-sm-3 imgUp">
+									<button id="btnfile" class=""> 
+									    <img src="ic_img_select@2x.png" style="width:100%;" alt="click to upload">
+									    <span id="fname" />
+									</button>
+									<div class="wrapper">
+									    <input type="file" id="uplodfile" />
+									</div>
+										<label class="">
+											front
 										</label>
 								 	</div><!-- col-2 -->
-							  	<div class="col-sm-2 imgUp">
-								    <div class="imagePreview">
-								    </div>
-										<label class="btn btn-dark">
-											Back<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+							  	<div class="col-sm-3 imgUp">
+									<button id="btnfile" class=""> 
+									    <img src="ic_img_select@2x.png" style="width:100%;" alt="click to upload">
+									    <span id="fname" />
+									</button>
+									<div class="wrapper">
+									    <input type="file" id="uplodfile" />
+									</div>
+										<label class="">
+											Back
 										</label>
 								 	</div><!-- col-2 -->
 								</div><!-- row -->
@@ -129,30 +139,14 @@
 		$(".imgAdd").click(function(){
   $(this).closest(".row").find('.imgAdd').before('<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>');
 });
-$(document).on("click", "i.del" , function() {
-// 	to remove card
-  $(this).parent().remove();
-// to clear image
-  // $(this).parent().find('.imagePreview').css("background-image","url('')");
+$("#btnfile").click(function () {
+    $("#uplodfile").click();
 });
-$(function() {
-    $(document).on("change",".uploadFile", function()
-    {
-    		var uploadFile = $(this);
-        var files = !!this.files ? this.files : [];
-        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
- 
-        if (/^image/.test( files[0].type)){ // only image file
-            var reader = new FileReader(); // instance of the FileReader
-            reader.readAsDataURL(files[0]); // read the local file
- 
-            reader.onloadend = function(){ // set image data as background of div
-                //alert(uploadFile.closest(".upimage").find('.imagePreview').length);
-uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url("+this.result+")");
-            }
-        }
-      
-    });
+
+$("#uplodfile").change(function () {
+    var file=$(this).val().replace(/C:\\fakepath\\/ig,'');
+    
+    $("#fname").text(file);
 });
 	</script>	
 </body>

@@ -21,16 +21,26 @@ body {
   color: white important;
 }
 
+#btnfile{
+  background: white;
+  border:none;
+}
+#fname{color:green}
+.wrapper {
+    display:none;
+}
+
+
 .imagePreview {
     width: 100%;
-    height: 180px;
-    background-position: center center;
-  background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+    height: 300px;
+    /*background-position: center center;*/
+  background-image:url("ic_img_select@2x.png");
   background-color:#fff;
     background-size: cover;
   background-repeat:no-repeat;
     display: inline-block;
-  box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+  /*box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);*/
 }
 .btn-primary
 {
