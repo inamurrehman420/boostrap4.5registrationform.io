@@ -5,6 +5,22 @@ body {
   height: 100%;
 }
 
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: grey !important;
+  cursor: pointer;
+  font-size: 18px;
+  color: white !important;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: black !important;
+  color: white important;
+}
+
 .imagePreview {
     width: 100%;
     height: 180px;

@@ -70,7 +70,7 @@
 					<br />
 					<br />
 					<h2> Create a business account</h2>
-					<a href="#">Or create a personal account</a>
+					<a style="color: grey;" href="#">Or create a personal account</a>
 					<br />
 					<br />
 					<br />
@@ -102,32 +102,32 @@
 			<div class="row " style="padding: 0 30px;">
 				<div class="col-md-6 col-sm-12 ">
 					<div class="row ">
-						<div class="col-md-6 col-sm-12 mt-5 ">
+						<div class="col-md-6 col-sm-12 mt-3 pr-0">
 							<input type="fname" class="form-control no-border" placeholder="First Name">
 						</div>
-						<div class="col-md-6 col-sm-12 mt-5">
+						<div class="col-md-6 col-sm-12 mt-3">
 							<input type="lname" class="form-control no-border" id="inputEmail3" placeholder="Last Name">
 						</div>
-						<div class="col-md-12 col-sm-12 mt-5">
+						<div class="col-md-12 col-sm-12 mt-3">
 							<input type="ename" class="form-control no-border" id="inputEmail3" placeholder="Email">
 						</div>
-						<div class="col-md-12 col-sm-12 mt-5">
+						<div class="col-md-12 col-sm-12 mt-3">
 							<input type="text" name="password" class="form-control no-border" placeholder="Password" /> <input
 								type="checkbox" id="eye" />
 						</div>
-						<div class="col-md-12 col-sm-12 mt-5">
+						<div class="col-md-12 col-sm-12 mt-3">
 							<input type="pn" class="form-control no-border" id="inputEmail3" placeholder="Phone Number">
 						</div>
-						<div class="col-md-12 col-sm-12 mt-5">
+						<div class="col-md-12 col-sm-12 mt-3">
 							<input type="ad" class="form-control no-border" id="inputEmail3" placeholder="Address">
 						</div>
-						<div class="col-md-6 col-sm-12 mt-5">
+						<div class="col-md-6 col-sm-12 mt-3">
 							<input type="city" class="form-control no-border" id="inputEmail3" placeholder="City">
 						</div>
-						<div class="col-md-6 col-sm-12 mt-5">
+						<div class="col-md-6 col-sm-12 mt-3">
 							<input type="code" class="form-control no-border" id="inputEmail3" placeholder="Postal Code">
 						</div>
-						<div class="col-md-12 col-sm-12 mt-5">
+						<div class="col-md-12 col-sm-12 mt-3">
 							<p>Enter the numbers in the image</p>
 							<a href="#intro"><img src='Image.png'
 									style='vertical-align: middle; width:430px; margin-right:5px;' /></a>
@@ -136,11 +136,11 @@
 									Agreement </span> and acknowledge reading our <span class="text-dark text-bold font-weight-bold"> User
 									Privacy
 									Notice.</span></p>
-							<a href="mobile.html"><button  type="button" class="btn mt-4 w-full" style="width: 100%; background-color: black; color: white;">Create account</button></a>
+							<a href="mobile.html"><button  type="button" class="btn mt-4 w-full" style="width: 100%;">Create account</button></a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-1 col-sm-12 mt-5 hidden-sm-down ">
+				<div class="col-md-1 col-sm-12 mt-3 hidden-sm-down ">
 					<img src='line.png' style='width: 1px; height: 30%;' />
 					<p style="margin-top: 14px;">or</p>
 					<img src='line.png' style='width: 1px; height: 30%;' />
@@ -166,15 +166,6 @@
 					</div>
 				</div>
 
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 text-right">
-					<button type="button" class="btn btn-secondary" style=" background-color: black; color: white;"><i class="fa fa-arrow-right"></i></button>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -209,5 +200,14 @@
 				html: true,
 				sanitize: false
 		});
+		var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
 		</script>
 </body>
